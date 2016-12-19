@@ -1,0 +1,34 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><%= link_to t(".home"), root_path %></li>
+          </ul>
+           <% if logged_in? %>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to t(".profile"), user_path(@current_user) %></li>
+            <li><%= link_to t(".signout"), logout_path,method: "delete" %> 
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+          </ul>
+           <% else %>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to t(".signin"), login_path %></li>
+            <li><%= link_to t(".signup"), signup_path %></li>
+          </ul> 
+          <% end %>
+       </div>
+     </div>
+   </nav>
+ </div>
+</header>
