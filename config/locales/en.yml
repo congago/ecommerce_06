@@ -9,6 +9,7 @@ en:
   postimported: "post imported."
   create_category_fail: "Create category fail"
   category_deleted: "Category deleted"
+  admin_base_denied: "you are not admin"
   static_pages:
     home:
       title: "Ecommerce_06"
@@ -41,19 +42,6 @@ en:
       count: "count"
       sum: "Sum"
       delete: "Delete"
-  categorys:
-    index:
-      all_Category: "All Category"
-      id_category: "ID category : "
-      delete: "Delete"
-      add_category: "Add category"
-      add_products_csv: "Add products csv"
-      confirm_delete: "You sure?"
-    new:
-      add_category: "Add category"
-      add: "Add"
-    show:
-      add: "Add++"
   products:
     product:
       posted: "Posted"
@@ -98,4 +86,17 @@ en:
       name: "Name :"
       email: "Email :"
       edit_user: "Edit user"
-
+  admin:
+    categorys:
+      index:
+        all_Category: "All Category"
+        id_category: "ID category : "
+        delete: "Delete"
+        add_category: "Add category"
+        add_products_csv: "Add products csv"
+        confirm_delete: "You sure?"
+      new:
+        add_category: "Add category"
+        add: "Add"
+      show:
+        add: "Add++"

@@ -1,0 +1,4 @@
+minimum_password: 6
+maximum_email: 255
+maximum_name: 50
+category_per_page: 5

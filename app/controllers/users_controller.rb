@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   before_action :admin_user,     only: :destroy
  
   def index
-    @users = User.paginate(page: params[:page])
+    @users = User.paginate page: params[:page]
   end
 
   def show
@@ -16,7 +16,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
+    @user = User.new user_params
     if @user.save
       redirect_to root_url
     else
@@ -30,7 +30,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find_by id: params[:id]
-    if @user.update_attributes(user_params)
+    if @user.update_attributes user_params
       flash[:success] = t "profile_updated"
       redirect_to @user
     else
@@ -65,7 +65,7 @@ class UsersController < ApplicationController
   end
 
   def admin_user
-    redirect_to root_url unless current_user.admin?
+    redirect_to root_url unless current_user.is_admin?
   end
 
 end
