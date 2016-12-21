@@ -87,16 +87,17 @@ en:
       email: "Email :"
       edit_user: "Edit user"
   admin:
-    categorys:
+    categories:
       index:
         all_Category: "All Category"
         id_category: "ID category : "
         delete: "Delete"
         add_category: "Add category"
         add_products_csv: "Add products csv"
-        confirm_delete: "You sure?"
       new:
         add_category: "Add category"
         add: "Add"
       show:
         add: "Add++"
+      category:
+        confirm_delete: "You sure?"
