@@ -9,9 +9,9 @@ Rails.application.routes.draw do
   post   "/login",  to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
   namespace :admin do
-    resources :categorys
+    resources :categorys, only: [:new,:create,:index, :destroy, :show]
+    resources :products
   end
   resources :users
-
-  resources :categorys, only: [:index]
+  resources :categorys,          only: [:new,:create,:index, :destroy, :show]
 end
