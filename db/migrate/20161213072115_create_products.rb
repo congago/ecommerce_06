@@ -1,12 +1,12 @@
 class CreateProducts < ActiveRecord::Migration[5.0]
   def change
     create_table :products do |t|
-      t.text :productname
-      t.integer :productPrice
-      t.boolean :productStatus
-      t.text :productDescription
+      t.text :name
+      t.integer :price
+      t.boolean :is_status
+      t.text :description
       t.integer :rate
-      t.string :upPicture
+      t.string :up_picture
       t.references :category, foreign_key: true
 
       t.timestamps

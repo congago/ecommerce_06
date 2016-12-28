@@ -1,0 +1,18 @@
+<h1><%= t ".all_Products" %></h1>
+<table>
+  <tr>
+    <th>
+      <%= form_tag admin_products_path, method: :get do %>
+        <%= text_field_tag :search, params[:search], 
+          class: "custom-search-form" %>
+        <%= submit_tag  t (".seach_products") %>
+      <% end %>
+    </th>
+  </tr>
+</table>  
+<table class = "table">
+  <tr>
+    <th><%= render @products %></th>
+  </tr>
+</table>
+<%= will_paginate @products %>

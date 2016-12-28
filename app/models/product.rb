@@ -7,5 +7,12 @@ class Product < ApplicationRecord
   has_many :product_vieweds, dependent: :destroy
   has_many :cart_items, dependent: :destroy
   
+  mount_uploader :up_picture, PictureUploader
+
   validates :category_id, presence: true
+  validates :price, presence: true, numericality: {only_integer: true}	
+
+  scope :search_product, ->search do   
+    where("name LIKE ?","%#{search}%").order "price" if search.present?
+  end
 end
