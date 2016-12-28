@@ -22,7 +22,7 @@ class Admin::CategoriesController < Admin::BaseController
   def create
     @category = Category.new category_params
     if @category.save
-      redirect_to admin_categorys_url
+      redirect_to admin_categories_url
     else
       flash[:danger] = t "create_category_fail"
       render :index
