@@ -72,6 +72,7 @@ ActiveRecord::Schema.define(version: 20161214085347) do
   end
 
   create_table "products", force: :cascade do |t|
+<<<<<<< HEAD
     t.text     "productname"
     t.integer  "productPrice"
     t.boolean  "productStatus"
@@ -81,6 +82,17 @@ ActiveRecord::Schema.define(version: 20161214085347) do
     t.integer  "category_id"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+=======
+    t.text     "name"
+    t.integer  "price"
+    t.boolean  "is_status"
+    t.text     "description"
+    t.integer  "rate"
+    t.string   "up_picture"
+    t.integer  "category_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+>>>>>>> 8659067fdccb53a51b78c5e6b85551bb13de849e
     t.index ["category_id", "created_at"], name: "index_products_on_category_id_and_created_at"
     t.index ["category_id"], name: "index_products_on_category_id"
   end

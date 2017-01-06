@@ -8,6 +8,9 @@ en:
   postimported: "post imported."
   create_category_fail: "Create category fail"
   category_deleted: "Category deleted"
+  product:
+    create: 
+      successfully: "Product was successfully created."
   static_pages:
     home:
       title: "Ecommerce_06s"
@@ -101,3 +104,21 @@ en:
       name: "Name :"
       email: "Email :"
       edit_user: "Edit user"
+<<<<<<< HEAD
+=======
+  admin:
+    categories:
+      index:
+        all_Category: "All Category"
+        id_category: "ID category : "
+        delete: "Delete"
+        add_category: "Add category"
+        add_products_csv: "Add products csv"
+      new:
+        add_category: "Add category"
+        add: "Add"
+      show:
+        add: "Add++"
+      category:
+        confirm_delete: "You sure?"
+>>>>>>> 8659067fdccb53a51b78c5e6b85551bb13de849e
